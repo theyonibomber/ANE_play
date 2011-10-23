@@ -8,19 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		484040DB13B1F8EE00411191 /* FlashRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 484040DA13B1F8EE00411191 /* FlashRuntimeExtensions.h */; };
-		484040DF13B1F9DE00411191 /* cbatterylife.m in Sources */ = {isa = PBXBuildFile; fileRef = 484040DE13B1F9DD00411191 /* cbatterylife.m */; };
-		4840413913B1FDB300411191 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4840413813B1FDB300411191 /* UIKit.framework */; };
+		484040DF13B1F9DE00411191 /* AccelerateExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 484040DE13B1F9DD00411191 /* AccelerateExample.m */; };
 		AA747D9F0F9514B9006C5449 /* AIRExtensionC_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* AIRExtensionC_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		FC935EAD145443BD009EAA56 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC935EAC145443BD009EAA56 /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		484040DA13B1F8EE00411191 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlashRuntimeExtensions.h; path = include/FlashRuntimeExtensions.h; sourceTree = FLEX_SDK; };
-		484040DE13B1F9DD00411191 /* cbatterylife.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cbatterylife.m; sourceTree = "<group>"; };
-		4840413813B1FDB300411191 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		484040DE13B1F9DD00411191 /* AccelerateExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerateExample.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* AIRExtensionC_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIRExtensionC_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libAIRExtensionC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAIRExtensionC.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC935EAC145443BD009EAA56 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,8 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC935EAD145443BD009EAA56 /* Accelerate.framework in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
-				4840413913B1FDB300411191 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +42,7 @@
 				D2AAC07E0554694100DB518D /* libAIRExtensionC.a */,
 			);
 			name = Products;
+			path = build;
 			sourceTree = "<group>";
 		};
 		0867D691FE84028FC02AAC07 /* AIRExtensionC */ = {
@@ -58,7 +59,7 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4840413813B1FDB300411191 /* UIKit.framework */,
+				FC935EAC145443BD009EAA56 /* Accelerate.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -67,7 +68,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				484040DE13B1F9DD00411191 /* cbatterylife.m */,
+				484040DE13B1F9DD00411191 /* AccelerateExample.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -143,7 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				484040DF13B1F9DE00411191 /* cbatterylife.m in Sources */,
+				484040DF13B1F9DE00411191 /* AccelerateExample.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,12 +160,15 @@
 				DSTROOT = /tmp/AIRExtensionC.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_LINK_WITH_DYNAMIC_LIBRARIES = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AIRExtensionC_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = AIRExtensionC;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -174,11 +178,14 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/AIRExtensionC.dst;
+				GCC_LINK_WITH_DYNAMIC_LIBRARIES = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AIRExtensionC_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = AIRExtensionC;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -190,6 +197,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
@@ -203,6 +211,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				SDKROOT = iphoneos;

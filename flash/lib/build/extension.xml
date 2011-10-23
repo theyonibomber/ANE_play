@@ -1,5 +1,5 @@
 <extension xmlns="http://ns.adobe.com/air/extension/2.5">
-  <id>com.custardbelly.ibattery</id>
+  <id>com.joytunes.accelerateexample</id>
   <versionNumber>1</versionNumber>
   <platforms>
     <platform name="iPhone-ARM">
